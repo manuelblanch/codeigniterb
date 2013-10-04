@@ -6,6 +6,6 @@ class principal extends CI_Controller {
 	public function principal1()
 	{
 		
-		$this->load->view('principal.html'); 
+		$this->load->view('principal.php'); 
 }
 }
