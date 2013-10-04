@@ -8,7 +8,7 @@ class usuarios extends CI_Controller {
 		
 		$this->load->view('crear'); 
 }
-	public function modificar()
+	public function modificar($id)
 	{
 		
 		$this->load->view('modificar'); 
@@ -19,7 +19,7 @@ public function listar()
 		
 		$this->load->view('listar'); 
 }
-	public function eliminar()
+	public function eliminar($id)
 	{
 		
 		$this->load->view('eliminar'); 
