@@ -9,24 +9,27 @@ class usuarios extends CI_Controller{
             $this->load->model('Hola_model');
     }
     
-	/*public function crear()
+	public function crear()
+	
 	{
 		
-		$this->load->view('crear'); 
-}
-	public function modificar($id)
-	{
-		
-		$this->load->view('modificar'); 
-	}*/
-
-	public function listar()
-	{
 		$data['hola']=$this->Hola_model->hola();
 		
 		$this->load->view('hola',$data); 	
+}
+	public function modificar()
+	{
+		
+		$this->load->view('modificar'); 
 	}
-	public function eliminar($id)
+
+	public function listar()
+	{
+		
+		
+		$this->load->view('listar'); 	
+	}
+	public function eliminar()
 	{
 		
 		$this->load->view('eliminar'); 
