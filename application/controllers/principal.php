@@ -13,7 +13,7 @@ function __construct()
 	{
 		
 		$this->load->view('principal.php'); 
-		$query = $this->db->get('products');
+		$query = $this->db->get('actor');
 		
 		if ($query->num_rows() > 0)
 		
@@ -22,8 +22,12 @@ function __construct()
 			foreach ($query->result() as $row)
 	{
 		
-			echo $row->productName;
+			echo $row->fullname;
 			echo "<p>";
+			
+		$data = array('actor' => 'actor_id' ,'fullname') => '31' ,'fullname' => 'Antonio');
+
+		$this->db->insert('actor', $data); 
 }
 	}
 }
@@ -44,6 +48,10 @@ public function crear()
 		$this->load->view('hola',$data);
 		
 		
+		
+		
 }
+
+
 
 }
