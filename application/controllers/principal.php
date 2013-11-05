@@ -24,14 +24,22 @@ function __construct()
 		
 			echo $row->fullname;
 			echo "<p>";
+		}
+	
+		
+	}
+	
+}
+	public function provainsertar1()
+		{
 			
-		$data = array('actor' => 'actor_id' ,'fullname') => '31' ,'fullname' => 'Antonio');
+		$data = array(
+			'actor_id' => 9000 ,
+			'fullname' => 'pepa',
+			);
 
 		$this->db->insert('actor', $data); 
 }
-	}
-}
-	
 	public function listar1()
 	{
 		
