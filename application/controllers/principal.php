@@ -30,16 +30,38 @@ function __construct()
 	}
 	
 }
-	public function provainsertar1()
-		{
+	//public function provainsertar1()
+		//{
 			
-		$data = array(
-			'actor_id' => 9000 ,
-			'fullname' => 'pepa',
-			);
+		//$data = array(
+			//'actor_id' => 9000 ,
+			//'fullname' => 'pepa',
+			//);
 
-		$this->db->insert('actor', $data); 
-}
+		//$this->db->insert('actor', $data); 
+//}
+
+	//public function provaesborrar()
+	//{
+		//$id = 9000;
+		
+		//$this->db->where('actor_id', $id);
+		//$this->db->delete('actor');
+	//}
+
+	public function probaupdate()
+	{
+		$data = array(
+			'actor_id' => 8000,
+			'fullname' => 'pepaete',
+			);
+		$id = 9000;
+		$id1 = 8000; 
+		$this->db->where('actor_id', $id);
+		$this->db->update('actor', $data);
+	}
+
+		
 	public function listar1()
 	{
 		
@@ -59,7 +81,5 @@ public function crear()
 		
 		
 }
-
-
 
 }
