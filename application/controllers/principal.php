@@ -83,3 +83,5 @@ public function crear()
 }
 
 }
+
+//array, el select en la clase modelo, fer select que demane la taula usuaris, fem un echo per veure si va be, 

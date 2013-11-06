@@ -27,7 +27,9 @@ class usuarios extends CI_Controller{
 	{
 		
 		
-		$this->load->view('listar'); 	
+		$this->load->view('listar'); 
+		
+
 	}
 	public function eliminar()
 	{
@@ -40,6 +42,16 @@ class usuarios extends CI_Controller{
 		
 		$this->load->view('examples'); 
 	}
+
+	public function listarusers()
+	{
+		$persona = array(
+			'nombre' => 'juanito',
+			'cognoms' => 'valderrama',
+			'dni' => '8765434456766'
+			);
+	}
+
 }
 
 /* End of file welcome.php */
