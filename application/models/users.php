@@ -5,6 +5,20 @@ class User extends CI_Model {
     {
         parent::__construct();
     }
+
+    function listausers()
+    {
+       
+        $this->db->select('Nom_usuari,Edat,Població,Provincia,DNI,Telefon,Estat_civil');
+        $query = $this->db->get('users');
+
+            
+
+        //echo '<pre>'; print_r($data); die();
+
+            return $query->result_array();
+
+        }
  
     function prueba() {
  

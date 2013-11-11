@@ -45,10 +45,15 @@ class usuarios extends CI_Controller{
 
 	public function listarusers()
 	{
+		$this->load->view('listarusers');
 		$persona = array(
-			'nombre' => 'juanito',
-			'cognoms' => 'valderrama',
-			'dni' => '8765434456766'
+			'Nom_usuari' => 'juanito',
+			'Edat' => 45,
+			'Poblacio' => 'Cheste',
+			'Provincia' => 'Valencia',
+			'DNI' => 8765434456766,
+			'Telefon' => 95734679898,
+			'Estat_civil' => 'Soltero'
 			);
 	}
 

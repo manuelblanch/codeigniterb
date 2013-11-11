@@ -13,6 +13,12 @@ function __construct()
 	{
 		
 		$this->load->view('principal.php'); 
+			
+}
+
+public function listaactor1()
+{
+		$this->load->view('listaactor.php'); 
 		$query = $this->db->get('actor');
 		
 		if ($query->num_rows() > 0)
@@ -30,6 +36,9 @@ function __construct()
 	}
 	
 }
+
+
+
 	//public function provainsertar1()
 		//{
 			
