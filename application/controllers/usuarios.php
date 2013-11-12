@@ -6,7 +6,9 @@ class usuarios extends CI_Controller{
     function __construct()
     {
 			parent::__construct();
-            $this->load->model('Hola_model');
+			$this->load->database();
+        //    $this->load->model('Hola_model');
+            $this->load->model('model_user');
     }
     
 	public function crear()
@@ -26,8 +28,8 @@ class usuarios extends CI_Controller{
 	public function listar()
 	{
 		
-		
-		$this->load->view('listar'); 
+		$users ['query'] = $this->model_user->Getusers();
+		$this->load->view('listar', $users); 
 		
 
 	}
@@ -43,7 +45,14 @@ class usuarios extends CI_Controller{
 		$this->load->view('examples'); 
 	}
 
-	public function listarusers()
+/*	public function listarusers()
+        {        
+                        
+                $users ['query'] = $this->model_user->Getusers();
+                $this->load->view('listar', $users);
+        }*/
+
+	/*public function listarusers()
 	{
 		$this->load->view('listarusers');
 		$persona = array(
@@ -55,7 +64,7 @@ class usuarios extends CI_Controller{
 			'Telefon' => 95734679898,
 			'Estat_civil' => 'Soltero'
 			);
-	}
+	}*/
 
 }
 

@@ -53,15 +53,15 @@
             <td><a href="eliminar/2"><button>Borra</button></a></td>
         </tr>
         <tr>
-				<th>3</th>	
-				<td>Ernesto</td>
-				<td>40</td>
-				<td>Barcelona</td>
-				<td>Barcelona</td>
-				<td>6644456</td>
-				<td>Soltero</td>
-				<td><a href="modificar/3"><button>Modifica</button></a></td>
-				<td><a href="eliminar/3"><button>Borra</button></a></td>
+			<th>3</th>	
+			<td>Ernesto</td>
+			<td>40</td>
+			<td>Barcelona</td>
+			<td>Barcelona</td>
+			<td>6644456</td>
+			<td>Soltero</td>
+			<td><a href="modificar/3"><button>Modifica</button></a></td>
+			<td><a href="eliminar/3"><button>Borra</button></a></td>
 		</tr>
        
     </tbody>
@@ -70,6 +70,37 @@
 <br>
 <br>
 <a href="crear"><button>Crear</button></a>
+
+
+<table id="taula" class="table table-hover table-condensed" border="1">
+    <thead>
+        <tr>
+            <th>category_id</th>
+            <th>name</th>
+            <th>Modifica o Elimina</th>
+        </tr>
+             <tbody>
+<?php
+
+foreach($query->result() as $index){
+
+        echo "<tr>";
+            echo "<td>".$index->category_id."</td>";
+            echo "<td>".$index->name."</td>";
+            echo "<td>".' <a href="modify">
+            <input type="button" name="boton" class="btn btn-sm btn-primary" value="Modifica"/>
+        </a>&nbsp;'.
+        '<a href="delete"><input type="button" class="btn btn-sm btn-danger" name="boton" value="Elimina"/></a>'."</td>";
+        echo "</tr>";} 
+
+?>          
+</tbody>
+
+<footer>
+
+    <p align="center">&copy; Manuel Blanch Garzon</p>
+
+</footer>
 
 </body>
 

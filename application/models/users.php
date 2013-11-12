@@ -19,6 +19,12 @@ class User extends CI_Model {
             return $query->result_array();
 
         }
+
+        function listarusers(){
+
+        $query=$this->db->get('categoria');
+                
+                return $query;
  
     function prueba() {
  
