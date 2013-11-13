@@ -87,7 +87,7 @@ foreach($query->result() as $index){
         echo "<tr>";
             echo "<td>".$index->category_id."</td>";
             echo "<td>".$index->name."</td>";
-            echo "<td>".' <a href="modify">
+            echo "<td>".' <a href="modificar">
             <input type="button" name="boton" class="btn btn-sm btn-primary" value="Modifica"/>
         </a>&nbsp;'.
         '<a href="delete"><input type="button" class="btn btn-sm btn-danger" name="boton" value="Elimina"/></a>'."</td>";
