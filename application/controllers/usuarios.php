@@ -15,9 +15,7 @@ class usuarios extends CI_Controller{
 	
 	{
 		
-		$data['hola']=$this->Hola_model->hola();
-		
-		$this->load->view('hola',$data); 	
+		$this->load->view('crear'); 	
 }
 	public function modificar()
 	{
@@ -33,6 +31,18 @@ class usuarios extends CI_Controller{
 		
 
 	}
+	
+	public function inserta()
+        {
+                
+               	$this->load->view('inserta');
+                $category_id = $this->input->post('category_id');
+                $name = $this->input->post('name');
+                if ($name!=null);
+                $this->model_user->insertUser($category_id, $name);
+
+                
+}
 	public function eliminar()
 	{
 		
@@ -43,6 +53,22 @@ class usuarios extends CI_Controller{
 	{
 		
 		$this->load->view('examples'); 
+	}
+
+	/*public function crear_element()
+
+	{
+
+		$this->load->view('insertat');
+		
+
+
+	}
+*/
+	public function insertat()
+
+	{
+		$this->load->view('insertat');
 	}
 
 /*	public function listarusers()

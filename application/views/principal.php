@@ -14,6 +14,7 @@
 		<p>Usuarios</p>
 		<ul>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/crear">Crear</a></li>
+			<li><a href="/codeigniterhelloworld/index.php/usuarios/inserta">Insertar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/listar">Listar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/modificar">Modificar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/eliminar">Eliminar</a></li>
