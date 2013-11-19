@@ -9,6 +9,7 @@ class usuarios extends CI_Controller{
 			$this->load->database();
         //    $this->load->model('Hola_model');
             $this->load->model('model_user');
+            $this->load->helper('url');
     }
     
 	public function crear()

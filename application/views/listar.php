@@ -2,17 +2,62 @@
 <head>
 	<title>DataTables example</title>
 	
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css">
+<!-- jQuery -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+ 
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+     <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            $('#taula').dataTable();
+            $('#taula1').dataTable();
+        } );
+</script>
 
+<script>
+$(function(){
+        
+        $("[rel='tooltip']").tooltipster();        
+        
+        $('#lessons').dataTable( {
+                "sDom": 'T<"clear">lfrtip',
+                "aLengthMenu": [[10, 25, 50,100,200,500,1000,-1], [10, 25, 50,100,200,500,1000, "<?php echo "All";?>"]],
+                "oTableTools": {
+                    "sSwfPath": "/assets/copy_csv_xls_pdf.swf');?>",
+                        "aButtons": [
+                                {
+                                        "sExtends": "copy",
+                                        "sButtonText": "<?php echo"Copy";?>"
+                                },
+                                {
+                                        "sExtends": "csv",
+                                        "sButtonText": "CSV"
+                                },
+                                {
+                                        "sExtends": "xls",
+                                        "sButtonText": "XLS"
+                                },
+                                {
+                                        "sExtends": "pdf",
+                                        "sPdfOrientation": "landscape",
+                                        "sPdfMessage": "<?php echo"lessons";?>",
+                                        "sTitle": "TODO",
+                                        "sButtonText": "PDF"
+                                },
+                                {
+                                        "sExtends": "print",
+                                        "sButtonText": "<?php echo "Print";?>"
+                                },
+                        ]
 
+        },
 
+        </script>
 </head>
 <body>
 <table border=4  id="taula"  class="table">
@@ -72,7 +117,7 @@
 <a href="crear"><button>Crear</button></a>
 
 
-<table id="taula" class="table table-hover table-condensed" border="1">
+<table id="taula1" class="table table-hover table-condensed" border="1">
     <thead>
         <tr>
             <th>category_id</th>
@@ -105,4 +150,3 @@ foreach($query->result() as $index){
 </body>
 
 </html>
-

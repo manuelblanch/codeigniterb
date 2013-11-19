@@ -8,9 +8,7 @@ class Model_User extends CI_Model {
     }
     
     function insertUser($category_id, $name){
-        $data = array(
-        'category_id' => $category_id,
-        'name'=> $name);
+        $data = array('category_id' => $category_id, 'name'=> $name);
         return $this->db->insert('category', $data);
         }
 
