@@ -18,6 +18,7 @@
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/listar">Listar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/modificar">Modificar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/eliminar">Eliminar</a></li>
+			<li><a href="/codeigniterhelloworld/index.php/usuarios/eliminar1">Eliminar1</a></li>
 		</ul>
 		<p>
 			Configuracion</p>

@@ -14,5 +14,11 @@ function Getusers(){
                 return $query;
 
             }
+            
+function deleteUser($name)
+    {
+       $this->db->delete('name', array('name' => $name));
+     
+    }
 
    }         

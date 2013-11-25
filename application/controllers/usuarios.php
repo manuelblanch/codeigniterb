@@ -44,10 +44,22 @@ class usuarios extends CI_Controller{
 
                 
 }
-	public function eliminar()
+	/*public function eliminar()
 	{
 		
 		$this->load->view('eliminar'); 
+	}
+	*/
+	 public function eliminar($category_id)
+        {
+                $this->model_user->deleteUser($category_id);
+                $this->load->view('eliminar'); 
+}
+	
+	public function eliminar1()
+	{
+		$this->load->view('eliminar_view');
+		
 	}
 
 		public function grocery()

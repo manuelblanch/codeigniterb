@@ -57,7 +57,7 @@ $(function(){
 
         },
 
-        </script>
+</script>
 </head>
 <body>
 <table border=4  id="taula"  class="table">
@@ -132,10 +132,12 @@ foreach($query->result() as $index){
         echo "<tr>";
             echo "<td>".$index->category_id."</td>";
             echo "<td>".$index->name."</td>";
-            echo "<td>".' <a href="modificar">
-            <input type="button" name="boton" class="btn btn-sm btn-primary" value="Modifica"/>
-        </a>&nbsp;'.
-        '<a href="delete"><input type="button" class="btn btn-sm btn-danger" name="boton" value="Elimina"/></a>'."</td>";
+            echo "<td>".
+            <a href='eliminar/<?php echo $index->category_id; ?>'><button class="btn btn-danger" type="button">Eliminar</button></a></td>
+            //' <a href="modificar">
+            //<input type="button" name="boton" class="btn btn-sm btn-primary" value="Modifica"/>
+        //</a>&nbsp;'.
+        //'<a href="eliminar"><input type="button" class="btn btn-sm btn-danger" name="boton" value="Elimina"/></a>'."</td>";
         echo "</tr>";} 
 
 ?>          

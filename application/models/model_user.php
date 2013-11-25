@@ -11,8 +11,7 @@ class Model_User extends CI_Model {
         $data = array('category_id' => $category_id, 'name'=> $name);
         return $this->db->insert('category', $data);
         }
-
-
+     
 function Getusers(){
 
         $query=$this->db->get('category');
@@ -20,5 +19,12 @@ function Getusers(){
                 return $query;
 
             }
+            
+function deleteUser($category_id)
+    {
+       $this->db->delete('category', array('category_id' => $category_id));
+     
+    }
 
    }         
+?>
