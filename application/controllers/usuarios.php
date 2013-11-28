@@ -23,7 +23,7 @@ class usuarios extends CI_Controller{
 		
 		$this->load->view('modificar'); 
 	}
-
+//
 	public function listar()
 	{
 		
