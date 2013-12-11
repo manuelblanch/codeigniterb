@@ -3,12 +3,27 @@
 	
 	<head>
 		<title>Pagina de codeigniter</title>
-		<?php include("capçalera.php"); ?>
-		
+		<?php include("boot.txt"); ?>
 		
 	</head>
 	<body>
-		<h2>Menu</h2>
+		
+		<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+          </button>
+          <a href="#" class="navbar-brand">Menu de Acceso</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+        </div>
+      </div>
+      </div>
+<div>
+</br>
+	<h2>Menu de usuarios</h2>
 		<p>-----------------------</p>
 		<p>INDICE :</p>
 		<p>Usuarios</p>
@@ -18,7 +33,6 @@
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/listar">Listar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/modificar">Modificar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/eliminar">Eliminar</a></li>
-			<li><a href="/codeigniterhelloworld/index.php/usuarios/eliminar1">Eliminar1</a></li>
 		</ul>
 		<p>
 			Configuracion</p>
