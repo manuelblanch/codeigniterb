@@ -84,6 +84,11 @@ class usuarios extends CI_Controller{
 		$this->load->view('insertat');
 	}
 
+	public function profile(){
+
+		$this->load->view('profile');
+	}
+
 /*	public function listarusers()
         {        
                         

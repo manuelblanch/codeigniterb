@@ -33,6 +33,7 @@
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/listar">Listar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/modificar">Modificar</a></li>
 			<li><a href="/codeigniterhelloworld/index.php/usuarios/eliminar">Eliminar</a></li>
+			<li><a href="/codeigniterhelloworld/index.php/usuarios/profile">Profile</a></li>
 		</ul>
 		<p>
 			Configuracion</p>
