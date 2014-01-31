@@ -52,6 +52,25 @@
 	</head>
 
 	<body>
+
+		<button>Get JSON data de datos</button>
+
+<script>$.getJSON( "http://localhost/codeigniterhelloworld/index.php/user/", function( data ) {
+	var items = [];
+
+  $.each( data, function( key, val ) {
+
+    items.push( "<li id='" + key + "'>" + val + "</li>" );
+
+  	});
+ 
+  $( "<ul/>", { "class": "my-new-list", html: items.join( "" )
+  }).
+  appendTo( "body" );
+	});
+
+</script> 
+
 		<div class="navbar navbar-default" id="navbar">
 			<script type="text/javascript">
 				try{ace.settings.check('navbar' , 'fixed')}catch(e){}
