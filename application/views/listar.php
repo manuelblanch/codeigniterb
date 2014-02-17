@@ -1,5 +1,5 @@
 <html>
-<head>
+<thead>
 	<title>DataTables example</title>
 	
 <!-- DataTables CSS -->
@@ -9,23 +9,36 @@
  
 <!-- DataTables -->
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-
+<!--<script type="text/javascript" charset="utf8" src="media/js/TableTools.js" -->
 <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 
      <script type="text/javascript" charset="utf-8">
         $(document).ready(function() {
             $('#taula').dataTable();
             $('#taula1').dataTable();
+
+
         } );
 </script>
 
+<!--<script>
+
+$(document).ready( function () {
+    var oTable = $('#taula1').dataTable( {
+        "sDom": 'Rlfrtip'
+    } );
+} );
+
+
+</script>
+-->
 <script>
 $(function(){
         
         $("[rel='tooltip']").tooltipster();        
         
         $('#lessons').dataTable( {
-                "sDom": 'T<"clear">lfrtip',
+                "sDom": 'Rlfrtip',
                 "aLengthMenu": [[10, 25, 50,100,200,500,1000,-1], [10, 25, 50,100,200,500,1000, "<?php echo "All";?>"]],
                 "oTableTools": {
                     "sSwfPath": "/assets/copy_csv_xls_pdf.swf');?>",
@@ -42,6 +55,7 @@ $(function(){
                                         "sExtends": "xls",
                                         "sButtonText": "XLS"
                                 },
+
                                 {
                                         "sExtends": "pdf",
                                         "sPdfOrientation": "landscape",
@@ -57,9 +71,9 @@ $(function(){
 
         },
 
-</script>
-</head>
-<body>
+</script> 
+</thead>
+<tbody>
 <table border=4  id="taula"  class="table">
 <thead>
         <tr>
@@ -145,6 +159,6 @@ foreach($query->result() as $index){
 
 </footer>
 
-</body>
+</tbody>
 
 </html>
