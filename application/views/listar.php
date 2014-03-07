@@ -21,6 +21,23 @@
         } );
 </script>
 
+<title>ColReorder example</title>
+        <style type="text/css" title="currentStyle">
+            @import "../../media/css/demo_page.css";
+            @import "../../media/css/demo_table.css";
+            @import "assets/media/css/ColReorder.css";
+        </style>
+        <script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/ColReorder.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            $(document).ready( function () {
+                var oTable = $('#example').dataTable( {
+                    "sDom": 'Rlfrtip'
+                } );
+            } );
+        </script>
+
 <!--<script>
 
 $(document).ready( function () {
@@ -32,16 +49,26 @@ $(document).ready( function () {
 
 </script>
 -->
+
+<script>
+$(document).ready( function () {
+    $('#25').dataTable( {
+        "sDom": 'C<"clear">lfrtip'
+    } );
+} );
+</script>
+
+
 <script>
 $(function(){
         
         $("[rel='tooltip']").tooltipster();        
         
         $('#lessons').dataTable( {
-                "sDom": 'Rlfrtip',
+                "sDom": 'C<"clear">lfrtip',
                 "aLengthMenu": [[10, 25, 50,100,200,500,1000,-1], [10, 25, 50,100,200,500,1000, "<?php echo "All";?>"]],
                 "oTableTools": {
-                    "sSwfPath": "/assets/copy_csv_xls_pdf.swf');?>",
+                    "sSwfPath": href="<?php echo base_url('assets/copy_csv_xls_pdf.swf');?>",
                         "aButtons": [
                                 {
                                         "sExtends": "copy",
@@ -73,6 +100,23 @@ $(function(){
 
 </script> 
 </thead>
+
+<!-- colreorder-->
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/ColReorder.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>/assets/media/css/ColReorder.css"></script>
+
+<!-- fixed header -->
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/FixedHeader.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/FixedHeader.min.js"></script>
+
+
+<!-- colvis -->
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/ColVis.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>assets/media/js/ColVis.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>/assets/media/css/ColVis.css"></script>
+<script type="text/javascript" charset="utf-8" src="<?php echo base_url() ?>/assets/media/css/ColVisAlt.css"></script>
+
+
 <tbody>
 <table border=4  id="taula"  class="table">
 <thead>
@@ -122,6 +166,7 @@ $(function(){
 			<td><a href="modificar/3"><button>Modifica</button></a></td>
 			<td><a href="eliminar/3"><button>Borra</button></a></td>
 		</tr>
+
        
     </tbody>
 </table>
